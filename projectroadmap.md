@@ -2,4 +2,4 @@
 - [x] Fork it to KSU-IS
 - [x] Create Read.me
 - [x] Upload code from Tripadvise repo for my project https://github.com/ksu-is/Tripadvise.git
-- [ ] 
+- [x] Upload code from Opti-Route repo for my project https://github.com/ksu-is/Opti-Route.git
