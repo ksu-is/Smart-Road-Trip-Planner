@@ -9,8 +9,8 @@ Sprint 1 Tasks Checklist
 
 Sprint 2 Taks Checklist
 
--[] start with trip destinations
--[] enter miles and gas info
--[] calculate fuel costs
--[] split cost between travelers feature
--[] total estimmated trip cost
+- [] start with trip destinations
+- [] enter miles and gas info
+- [] calculate fuel costs
+- [] split cost between travelers feature
+- [] total estimmated trip cost
