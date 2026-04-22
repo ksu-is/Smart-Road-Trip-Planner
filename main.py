@@ -9,6 +9,7 @@ def calculate_fuel_cost():
     fuel_cost = gallons_needed * gas_price
 
     print(f"Estimated fuel cost for your trip: ${fuel_cost:.2f}")
+    return fuel_cost
 
 # Lodging Calculator
 
@@ -16,9 +17,10 @@ def calculate_lodging_cost():
     nights = int(input("Enter the number of nights you'll be staying: "))
     cost_per_night = float(input("Enter the cost per night: "))
 
-    lodging_codst = nights * cost_per_night
+    lodging_cost = nights * cost_per_night
 
-    print(f"Estimated lodging cost for your trip: ${lodging_codst:.2f}")  
+    print(f"Estimated lodging cost for your trip: ${lodging_cost:.2f}")
+    return lodging_cost
 
 # Food Cost Calculator
 
@@ -29,6 +31,7 @@ def calculate_food_cost():
     food_cost = days * daily_food_cost
 
     print(f"Estimated food cost for your trip: ${food_cost:.2f}")
+    return food_cost
 
 # Activity Cost Calculator
 
@@ -36,16 +39,18 @@ def calculate_activity_cost():
     activities_cost = float(input("Enter the estimated cost of activities for your trip: "))
 
     print(f"Estimated activity cost for your trip: ${activities_cost:.2f}")
+    return activities_cost
 
 # Main Page
 
 def main():
     print("Welcome to the Smart Road Trip Planner- Let's plan your trip!")
-    calculate_fuel_cost()
-    calculate_lodging_cost()
-    calculate_food_cost()
-    calculate_activity_cost()
-    
+    fuel = calculate_fuel_cost()
+    lodging = calculate_lodging_cost()
+    food = calculate_food_cost()
+    activities = calculate_activity_cost()
 
+    total_cost = fuel + lodging + food + activities
+    print(f"Total Estimated Trip Cost: ${total_cost:.2f}")
 
 main()
