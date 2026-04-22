@@ -9,9 +9,9 @@ Sprint 1 Tasks Checklist
 
 Sprint 2 Taks Checklist
 - [x] create main program
-- [] best route for trip destination
-- [] Lodging cost calculator (whether hotel or reserving land)
+- [X] best route for trip destination
+- [X] Lodging cost calculator (whether hotel or reserving land)
 - [x] enter miles and gas info
 - [x] calculate fuel costs
-- [] split cost between travelers feature
-- [] total estimated trip cost
+- [X] split cost between travelers feature
+- [X] total estimated trip cost
