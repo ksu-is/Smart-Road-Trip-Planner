@@ -20,7 +20,7 @@ def calculate_lodging_cost():
 
     print(f"Estimated lodging cost for your trip: ${lodging_codst:.2f}")  
 
-# Food/Actvities Calculator
+# Food Cost Calculator
 
 def calculate_food_cost():
     days = int(input("Enter the number of travel days: "))
@@ -30,6 +30,13 @@ def calculate_food_cost():
 
     print(f"Estimated food cost for your trip: ${food_cost:.2f}")
 
+# Activity Cost Calculator
+
+def calculate_activity_cost():
+    activities_cost = float(input("Enter the estimated cost of activities for your trip: "))
+
+    print(f"Estimated activity cost for your trip: ${activities_cost:.2f}")
+
 # Main Page
 
 def main():
@@ -37,5 +44,8 @@ def main():
     calculate_fuel_cost()
     calculate_lodging_cost()
     calculate_food_cost()
+    calculate_activity_cost()
+    
+
 
 main()
