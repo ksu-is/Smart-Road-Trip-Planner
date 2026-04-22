@@ -41,6 +41,15 @@ def calculate_activity_cost():
     print(f"Estimated activity cost for your trip: ${activities_cost:.2f}")
     return activities_cost
 
+#Split Cost Per Person Calculator
+
+def split_cost_between_travelers(total_cost):
+    travelers= int(input("Enter the number of travelers: "))
+
+    cost_per_person = total_cost / travelers
+
+    print(f"Cost per person for the trip: ${cost_per_person:.2f}")
+
 # Main Page
 
 def main():
@@ -52,5 +61,7 @@ def main():
 
     total_cost = fuel + lodging + food + activities
     print(f"Total Estimated Trip Cost: ${total_cost:.2f}")
+
+    split_cost_between_travelers(total_cost)
 
 main()
