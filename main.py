@@ -1,5 +1,7 @@
 # Adding Fuel Calculator
 
+expenses = []
+
 def calculate_fuel_cost():
     miles = float(input("Enter the total trip miles: "))
     mpg = float(input("Enter your vehicle's miles per gallon (MPG): "))
@@ -74,6 +76,31 @@ def find_best_route():
         best_route = route3_name
     
     print(f"The best route to {destination}: {best_route} with {shortest_miles} miles.")
+
+#  View Expenses to date feature
+
+def add_daily_expense():
+    expense_name= input("Enter expense name (ex: fuel, lodging, food, activities):")
+    expense_amount = float(input("Enter the amount for this expense: "))
+
+    expenses.append([expense_name, expense_amount])
+
+    print(f"Added expense: {expense_name} - ${expense_amount:.2f}")
+
+def view_expenses_to_date():
+    if len(expenses) == 0:
+        print("No expenses recorded yet.")
+        return
+
+    print("\nTrip Expenses to Date:")
+
+    total_spent = 0
+
+    for expense in expenses:
+        print(f"{expense[0]}: ${expense[1]:.2f}")
+        total_spent += expense[1]
+
+    print(f"Total Spent So Far: ${total_spent:.2f}")             
  
 
 # Main Page
@@ -83,9 +110,11 @@ def main():
             print("\nSmart Road Trip Planner Menu")
             print("1. Find the Best Route")
             print("2. Calculate Trip Costs")
-            print("3. Exit")
+            print("3. Add Trip Expense")
+            print("4. View Expenses to Date")
+            print("5. Exit")
 
-            choice= input("Enter your choice (1-3): ")
+            choice= input("Enter your choice (1-5): ")
 
             if choice == '1':
                 find_best_route()
@@ -101,12 +130,18 @@ def main():
                 print(f"Total Estimated Trip Cost: ${total_cost:.2f}")
 
                 split_cost_between_travelers(total_cost)
-            
+
             elif choice == '3':
+                add_daily_expense()
+
+            elif choice == '4':
+                view_expenses_to_date()        
+            
+            elif choice == '5':
                 print("Thank you for using the Smart Road Trip Planner. Safe travels!")
                 break
         
             else:
-                print("Invalid choice. Please enter a number between 1 and 3.")
+                print("Invalid choice. Please enter a number between 1 and 5.")
 
 main()
