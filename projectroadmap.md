@@ -21,7 +21,9 @@ Sprint 2 Tasks Checklist
 
 Sprint 3 Tasks Checklist
 
-- [] Add menu for better user experience
-- [] Add more advanced route optimization
-- [] 
+- [X] Add menu for better user experience
+- [X] Added an Add Daily Expenses feature
+- [X] Added a View Trip Expense to Date
+- [] Create powerpoint slide
+
 
