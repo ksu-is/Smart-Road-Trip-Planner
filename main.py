@@ -79,18 +79,34 @@ def find_best_route():
 # Main Page
 
 def main():
-    print("Welcome to the Smart Road Trip Planner- Let's plan your trip!")
+        while True:
+            print("\nSmart Road Trip Planner Menu")
+            print("1. Find the Best Route")
+            print("2. Calculate Trip Costs")
+            print("3. Exit")
 
-    find_best_route()
+            choice= input("Enter your choice (1-3): ")
 
-    fuel = calculate_fuel_cost()
-    lodging = calculate_lodging_cost()
-    food = calculate_food_cost()
-    activities = calculate_activity_cost()
+            if choice == '1':
+                find_best_route()
 
-    total_cost = fuel + lodging + food + activities
-    print(f"Total Estimated Trip Cost: ${total_cost:.2f}")
+            elif choice == '2':
+                fuel = calculate_fuel_cost()
+                lodging = calculate_lodging_cost()
+                food = calculate_food_cost()
+                activities = calculate_activity_cost()
 
-    split_cost_between_travelers(total_cost)
+                total_cost = fuel + lodging + food + activities
+            
+                print(f"Total Estimated Trip Cost: ${total_cost:.2f}")
+
+                split_cost_between_travelers(total_cost)
+            
+            elif choice == '3':
+                print("Thank you for using the Smart Road Trip Planner. Safe travels!")
+                break
+        
+            else:
+                print("Invalid choice. Please enter a number between 1 and 3.")
 
 main()
